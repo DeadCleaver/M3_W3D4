@@ -1,0 +1,131 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap');
+
+/* general reset */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+
+@font-face {
+    font-family: Feather;
+    src: url(./assets/fa-regular-400.woff2);
+}
+
+
+/* carousels */
+
+@media (max-width: 767px) {
+    .carousel-inner .carousel-item > div {
+        display: none;
+    }
+    .carousel-inner .carousel-item > div:first-child, .carousel-inner .carousel-item > div:nth-child(2) {
+        display: block;
+    }
+}
+
+.carousel-inner .carousel-item.active,
+.carousel-inner .carousel-item-next,
+.carousel-inner .carousel-item-prev {
+    display: flex;
+}
+
+/* medium and up screens */
+@media (min-width: 768px) {
+    
+    .carousel-inner .carousel-item-end.active,
+    .carousel-inner .carousel-item-next {
+      transform: translateX(25%);
+    }
+    
+    .carousel-inner .carousel-item-start.active, 
+    .carousel-inner .carousel-item-prev {
+      transform: translateX(-25%);
+    }
+}
+
+.carousel-inner .carousel-item-end,
+.carousel-inner .carousel-item-start { 
+  transform: translateX(0);
+}
+
+/* personalizations */
+
+main {
+    font-style: Feather;
+    background-color: #f5f4f8;
+}
+
+
+/* da fare: riposizionare i badge */
+span.st-notify {
+    top: 10% !important;
+    right: 10% !important;
+}
+
+span.st-avatar-notify {
+    bottom: 1.5% !important;
+    right: 0.5% !important;
+}
+
+
+.st-avatar {
+    height: 50px;
+}
+
+.st-avatar-mail {
+    font-size: 9pt !important;
+    color: lightgrey !important;
+}
+
+div.st-jumbo {
+    background-color: #7550fe;
+    padding-top: 100px !important;
+}
+
+.st-under-icon {
+    color: #c28135 !important;
+    background-color: #ffeeda !important;
+    font-size: 20pt;
+}
+
+.st-payoffs {
+    background-color: #ffffff;
+}
+
+ion-icon.st-star {
+    color: #ffc107;
+}
+
+img.mini-avatar {
+    height: 25px;
+}
+
+ion-icon.st-arrows {
+    font-size: 24pt;
+    color: darkslategrey !important;
+    background-color: white !important;
+}
+
+.carousel-control-prev {
+    left: -10%;
+}
+
+.carousel-control-next {
+    right: -10%;
+}
+
+div.st-course-block:hover {
+    transition: transform 1.5s ease-in-out 0.2s;
+    transform: scale(1.3);
+    z-index: 1;
+  }
+
+div.card:hover {
+    box-shadow: 4px 7px 13px -1px rgba(0,0,0,0.52);
+}
+
+div.carousel-inner:hover {
+    overflow: visible !important;
+}

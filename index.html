@@ -1,0 +1,604 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IT site prototype</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <main>
+
+        <!-- Navbar -->
+        <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#"><img class="img" src="./assets/logo.svg" alt="logo"></a>
+
+                <!-- navbar toggler and icon -->
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <!-- navbar menu -->
+                <div class="collapse navbar-collapse" id="navbarNavDropdown">
+
+                    <ul class="navbar-nav">
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle active" href="#" role="button" data-bs-toggle="dropdown"
+                                aria-expanded="false">Browse</a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                <li><a class="dropdown-item" href="#">Action</a></li>
+                                <li><a class="dropdown-item" href="#">Another action</a></li>
+                                <li><a class="dropdown-item" href="#">Also another action</a></li>
+                            </ul>
+                        </li>
+
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle active" href="#" role="button" data-bs-toggle="dropdown"
+                                aria-expanded="false">Landing</a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                <li><a class="dropdown-item" href="#">Action</a></li>
+                                <li><a class="dropdown-item" href="#">Another action</a></li>
+                                <li><a class="dropdown-item" href="#">Also another action</a></li>
+                            </ul>
+                        </li>
+
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle active" href="#" role="button" data-bs-toggle="dropdown"
+                                aria-expanded="false">Pages</a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                <li><a class="dropdown-item" href="#">Action</a></li>
+                                <li><a class="dropdown-item" href="#">Another action</a></li>
+                                <li><a class="dropdown-item" href="#">Also another action</a></li>
+                            </ul>
+                        </li>
+
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle active" href="#" role="button" data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                                Accounts
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                <li><a class="dropdown-item" href="#">Action</a></li>
+                                <li><a class="dropdown-item" href="#">Another action</a></li>
+                                <li><a class="dropdown-item" href="#">Also another action</a></li>
+                            </ul>
+                        </li>
+
+                    </ul>
+                </div>
+
+                <!-- user section -->
+                <div class="d-flex">
+
+
+
+                    <div class="position-relative">
+                        <ion-icon class="p-3 border-1 bg-secondary rounded-circle me-2 text-light"
+                            name="notifications-outline"></ion-icon>
+                        <span
+                            class="position-absolute translate-middle p-1 bg-danger border border-light rounded-circle st-notify">
+                            <span class="visually-hidden">New alerts</span>
+                        </span>
+                    </div>
+
+                    <div class="position-relative">
+
+                        <div class="dropdown">
+                            <a href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                                <img class="img rounded-circle st-avatar" src="./assets/avatar-4.jpg"
+                                    alt="avatar image">
+                            </a>
+
+                            <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="dropdownMenuLink">
+
+                                <li>
+                                    <div class="row">
+                                        <div class="col-3 d-flex align-items-center">
+                                            <img class="img rounded-circle mini-avatar ms-1" src="./assets/avatar-4.jpg"
+                                                alt="avatar image">
+                                        </div>
+                                        <div class="col-9">
+                                            <div class="fs-6">John Doe</div>
+                                            <div class="st-avatar-mail" href="#">jonhdoe@geeksui.com</div>
+                                        </div>
+                                    </div>
+                                </li>
+
+                                <li>
+                                    <hr class="dropdown-divider">
+                                </li>
+
+                                <li><a class="dropdown-item" href="#"><ion-icon class="me-2"
+                                            name="person-outline"></ion-icon>Profile</a></li>
+                                <li><a class="dropdown-item" href="#"><ion-icon class="me-2"
+                                            name="star-outline"></ion-icon>Subscription</a></li>
+                                <li><a class="dropdown-item" href="#"><ion-icon class="me-2"
+                                            name="settings-outline"></ion-icon>Settings</a></li>
+                                <li>
+                                    <hr class="dropdown-divider">
+                                </li>
+
+                                <li><a class="dropdown-item" href="#"><ion-icon class="me-2"
+                                            name="power-outline"></ion-icon>Sign Out</a></li>
+
+
+                            </ul>
+                        </div>
+
+                        <span
+                            class="position-absolute translate-middle p-1 bg-success border border-light rounded-circle st-avatar-notify">
+                            <span class="visually-hidden">New alerts</span>
+                        </span>
+                    </div>
+
+
+                    <!--                     <div class="btn-group">
+                        <button type="button" class="btn dropdown-toggle st-avatar-btn" data-bs-toggle="dropdown" aria-expanded="false">
+                            <img id="st-avatar" src="./assets/avatar-5.jpg" alt="avatar image" class="img-responsive rounded-circle">
+                        </button>
+                        <ul class="dropdown-menu dropdown-menu-end">
+                          <li><a class="dropdown-item" href="#">Menu item</a></li>
+                          <li><a class="dropdown-item" href="#">Menu item</a></li>
+                          <li><a class="dropdown-item" href="#">Menu item</a></li>
+                        </ul>
+                      </div> -->
+
+                </div>
+
+            </div>
+        </nav>
+
+        <!-- jumbotron -->
+        <div class="st-jumbo">
+
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-12 col-md-6">
+                        <div class="container text-light mb-3">
+                            <h1 class="fw-bold">Welcome Web Students!</h1>
+                            <p>Hand-picked Instructor and expertly crafted courses, designed for the modern students
+                                and entrepreneur.</p>
+                        </div>
+                        <div class="container">
+                            <button type="button" class="btn btn-success">Browse Courses</button>
+                            <button type="button" class="btn btn-light"> Are You Instructor?</button>
+                        </div>
+                    </div>
+
+                    <div class="col-12 col-md-6">
+                        <img src="./assets/hero-img.png" class="d-block mx-lg-auto img-fluid">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- underjumbo -->
+        <section class="bg-light st-payoffs shadow">
+            <div class="row mx-5">
+
+                <div class="col-12 col-md-4 d-flex align-items-center py-3">
+                    <ion-icon class="p-3 bg-secondary rounded-circle me-1 st-under-icon"
+                        name="videocam-outline"></ion-icon>
+                    <div class="container">
+                        <p class="fw-bold m-0">30,000 online courses</p>
+                        <p class="m-0">Enjoy a variety of fresh topics</p>
+                    </div>
+                </div>
+
+                <div class="col-12 col-md-4 d-flex align-items-center py-3">
+                    <ion-icon class="p-3 bg-secondary rounded-circle me-1 st-under-icon"
+                        name="people-outline"></ion-icon>
+                    <div class="container">
+                        <p class="fw-bold m-0">Expert instruction</p>
+                        <p class="m-0">Find the right instructor for you</p>
+                    </div>
+                </div>
+
+                <div class="col-12 col-md-4 d-flex align-items-center py-3">
+                    <ion-icon class="p-3 bg-secondary rounded-circle me-1 st-under-icon" name="time-outline"></ion-icon>
+                    <div class="container">
+                        <p class="fw-bold m-0">Lifetime access</p>
+                        <p class="m-0">Learn on your schedule</p>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- carousel 1 title -->
+        <section class="container">
+            <h4 class="py-4">Recomended to you</h4>
+        </section>
+
+        <!-- carousel 1 -->
+        <div class="container text-center my-3">
+            <div class="row mx-auto my-auto justify-content-center">
+                <div id="recipeCarousel1" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-inner" role="listbox">
+
+                        <div class="carousel-item active">
+                            <div class="col-6 col-md-3 st-course-block">
+                                <div class="card mx-2">
+                                    <img src="./assets/course-graphql.jpg" class="card-img-top" alt="graphql">
+                                    <div class="card-body p-0 text-start">
+                                        <h5 class="card-title p-2">GraphQL: introduction to graphQL for beginners</h5>
+                                        <p class="card-text fw-light px-2">
+                                            <ion-icon name="time-outline"></ion-icon>
+                                            <span>2h 40m</span>
+                                            <i class="fa-solid fa-signal"></i>
+                                            <span>Advance</span>
+                                        </p>
+                                        <p class="card-text px-2">
+                                            <ion-icon class="st-star" name="star"></ion-icon>
+                                            <ion-icon class="st-star" name="star"></ion-icon>
+                                            <ion-icon class="st-star" name="star-half"></ion-icon>
+                                            <ion-icon class="st-star" name="star-outline"></ion-icon>
+                                            <ion-icon class="st-star" name="star-outline"></ion-icon>
+                                        </p>
+                                        <p class="card-text px-2"><span class="fw-bold">$500 </span><span
+                                                class="text-decoration-line-through">$600</span></p>
+                                        <div class="card-footer">
+                                            <div class="row align-items-center">
+                                                <div class="col-10">
+                                                    <img class="img mini-avatar rounded-circle"
+                                                        src="./assets/avatar-5.jpg" alt="Brooklyn Simmons">
+                                                    <span>Brooklyn Simmons</span>
+                                                </div>
+                                                <div class="col-2">
+                                                    <i class="fa-regular fa-bookmark"></i>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <div class="carousel-item">
+                            <div class="col-6 col-md-3 st-course-block">
+                                <div class="card mx-2">
+                                    <img src="./assets/course-javascript.jpg" class="card-img-top" alt="javascript">
+                                    <div class="card-body p-0 text-start">
+                                        <h5 class="card-title p-2">A Complete Beginner's
+                                            Guide to JavaScript</h5>
+                                        <p class="card-text fw-light px-2">
+                                            <ion-icon name="time-outline"></ion-icon>
+                                            <span>4h 10m</span>
+                                            <i class="fa-solid fa-signal"></i>
+                                            <span>Advance</span>
+                                        </p>
+                                        <p class="card-text px-2">
+                                            <ion-icon class="st-star" name="star"></ion-icon>
+                                            <ion-icon class="st-star" name="star"></ion-icon> <ion-icon class="st-star"
+                                                name="star"></ion-icon>
+                                            <ion-icon class="st-star" name="star"></ion-icon>
+                                            <ion-icon class="st-star" name="star-half"></ion-icon>
+                                            <ion-icon class="st-star" name="star-outline"></ion-icon>
+                                        </p>
+                                        <p class="card-text px-2"><span class="fw-bold">$700 </span><span
+                                                class="text-decoration-line-through">$850</span></p>
+                                        <div class="card-footer">
+                                            <div class="row align-items-center">
+                                                <div class="col-10">
+                                                    <img class="img mini-avatar rounded-circle"
+                                                        src="./assets/avatar-1.jpg" alt="Jenny Wilson">
+                                                    <span>Jenny Wilson</span>
+                                                </div>
+                                                <div class="col-2">
+                                                    <i class="fa-regular fa-bookmark"></i>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <div class="carousel-item">
+                            <div class="col-6 col-md-3 st-course-block">
+
+                                <div class="card mx-2">
+                                    <img src="./assets/course-node.jpg" class="card-img-top" alt="nodejs">
+                                    <div class="card-body p-0 text-start">
+                                        <h5 class="card-title p-2">Beginning Node.js, Express & MongoDB Development</h5>
+                                        <p class="card-text fw-light px-2">
+                                            <ion-icon name="time-outline"></ion-icon>
+                                            <span>2h 00m</span>
+                                            <i class="fa-solid fa-signal"></i>
+                                            <span>Advance</span>
+                                        </p>
+                                        <p class="card-text px-2">
+                                            <ion-icon class="st-star" name="star"></ion-icon>
+                                            <ion-icon class="st-star" name="star"></ion-icon>
+                                            <ion-icon class="st-star" name="star"></ion-icon>
+                                            <ion-icon class="st-star" name="star"></ion-icon>
+                                            <ion-icon class="st-star" name="star-outline"></ion-icon>
+                                        </p>
+                                        <p class="card-text px-2"><span class="fw-bold">$800 </span><span
+                                                class="text-decoration-line-through">$950</span></p>
+                                        <div class="card-footer">
+                                            <div class="row align-items-center">
+                                                <div class="col-10">
+                                                    <img class="img mini-avatar rounded-circle"
+                                                        src="./assets/avatar-3.jpg" alt="Sina Ray">
+                                                    <span>Sina Ray</span>
+                                                </div>
+                                                <div class="col-2">
+                                                    <i class="fa-regular fa-bookmark"></i>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <div class="carousel-item">
+                            <div class="col-6 col-md-3 st-course-block">
+
+                                <div class="card mx-2">
+                                    <img src="./assets/course-laravel.jpg" class="card-img-top" alt="laravel">
+                                    <div class="card-body p-0 text-start">
+                                        <h5 class="card-title p-2">Laravel: The Ultimate
+                                            Beginner's Guide to Learn</h5>
+                                        <p class="card-text fw-light px-2">
+                                            <ion-icon name="time-outline"></ion-icon>
+                                            <span>1h 00m</span>
+                                            <i class="fa-solid fa-signal"></i>
+                                            <span>Advance</span>
+                                        </p>
+                                        <p class="card-text px-2">
+                                            <ion-icon class="st-star" name="star"></ion-icon>
+                                            <ion-icon class="st-star" name="star"></ion-icon>
+                                            <ion-icon class="st-star" name="star"></ion-icon>
+                                            <ion-icon class="st-star" name="star"></ion-icon>
+                                            <ion-icon class="st-star" name="star-half"></ion-icon>
+                                        </p>
+                                        <p class="card-text px-2"><span class="fw-bold">$170 </span><span
+                                                class="text-decoration-line-through">$220</span></p>
+                                        <div class="card-footer">
+                                            <div class="row align-items-center">
+                                                <div class="col-10">
+                                                    <img class="img mini-avatar rounded-circle"
+                                                        src="./assets/avatar-7.jpg" alt="Sobo Rikhan">
+                                                    <span>Sobo Rikhan</span>
+                                                </div>
+                                                <div class="col-2">
+                                                    <i class="fa-regular fa-bookmark"></i>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+
+                    </div>
+                    <a class="carousel-control-prev bg-transparent w-aut" href="#recipeCarousel1" role="button"
+                        data-bs-slide="prev">
+                        <ion-icon class="st-arrows rounded-circle p-2 bg-light" name="chevron-back-outline"
+                            aria-hidden="true"></ion-icon>
+                    </a>
+                    <a class="carousel-control-next bg-transparent w-aut" href="#recipeCarousel1" role="button"
+                        data-bs-slide="next">
+                        <ion-icon class="st-arrows rounded-circle p-2 bg-light" name="chevron-forward-outline"
+                            aria-hidden="true"></ion-icon>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- carousel 2 title -->
+        <section class="container">
+            <h4 class="py-4">Most Popular</h4>
+        </section>
+
+        <!-- carousel 2 -->
+        <div class="container text-center my-3">
+            <div class="row mx-auto my-auto justify-content-center">
+                <div id="recipeCarousel2" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-inner" role="listbox">
+
+                        <div class="carousel-item active">
+                            <div class="col-6 col-md-3 st-course-block">
+
+                                <div class="card mx-2">
+                                    <img src="./assets/course-graphql.jpg" class="card-img-top" alt="graphql">
+                                    <div class="card-body p-0 text-start">
+                                        <h5 class="card-title p-2">GraphQL: introduction to graphQL for beginners</h5>
+                                        <p class="card-text fw-light px-2">
+                                            <ion-icon name="time-outline"></ion-icon>
+                                            <span>2h 40m</span>
+                                            <i class="fa-solid fa-signal"></i>
+                                            <span>Advance</span>
+                                        </p>
+                                        <p class="card-text px-2">
+                                            <ion-icon class="st-star" name="star"></ion-icon>
+                                            <ion-icon class="st-star" name="star"></ion-icon>
+                                            <ion-icon class="st-star" name="star-half"></ion-icon>
+                                            <ion-icon class="st-star" name="star-outline"></ion-icon>
+                                            <ion-icon class="st-star" name="star-outline"></ion-icon>
+                                        </p>
+                                        <p class="card-text px-2"><span class="fw-bold">$500 </span><span
+                                                class="text-decoration-line-through">$600</span></p>
+                                        <div class="card-footer">
+                                            <div class="row align-items-center">
+                                                <div class="col-10">
+                                                    <img class="img mini-avatar rounded-circle"
+                                                        src="./assets/avatar-5.jpg" alt="Brooklyn Simmons">
+                                                    <span>Brooklyn Simmons</span>
+                                                </div>
+                                                <div class="col-2">
+                                                    <i class="fa-regular fa-bookmark"></i>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <div class="carousel-item">
+                            <div class="col-6 col-md-3 st-course-block">
+
+                                <div class="card mx-2">
+                                    <img src="./assets/course-javascript.jpg" class="card-img-top" alt="javascript">
+                                    <div class="card-body p-0 text-start">
+                                        <h5 class="card-title p-2">A Complete Beginner's
+                                            Guide to JavaScript</h5>
+                                        <p class="card-text fw-light px-2">
+                                            <ion-icon name="time-outline"></ion-icon>
+                                            <span>4h 10m</span>
+                                            <i class="fa-solid fa-signal"></i>
+                                            <span>Advance</span>
+                                        </p>
+                                        <p class="card-text px-2">
+                                            <ion-icon class="st-star" name="star"></ion-icon>
+                                            <ion-icon class="st-star" name="star"></ion-icon> <ion-icon class="st-star"
+                                                name="star"></ion-icon>
+                                            <ion-icon class="st-star" name="star"></ion-icon>
+                                            <ion-icon class="st-star" name="star-half"></ion-icon>
+                                            <ion-icon class="st-star" name="star-outline"></ion-icon>
+                                        </p>
+                                        <p class="card-text px-2"><span class="fw-bold">$700 </span><span
+                                                class="text-decoration-line-through">$850</span></p>
+                                        <div class="card-footer">
+                                            <div class="row align-items-center">
+                                                <div class="col-10">
+                                                    <img class="img mini-avatar rounded-circle"
+                                                        src="./assets/avatar-1.jpg" alt="Jenny Wilson">
+                                                    <span>Jenny Wilson</span>
+                                                </div>
+                                                <div class="col-2">
+                                                    <i class="fa-regular fa-bookmark"></i>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <div class="carousel-item">
+                            <div class="col-6 col-md-3 st-course-block">
+
+                                <div class="card mx-2">
+                                    <img src="./assets/course-node.jpg" class="card-img-top" alt="nodejs">
+                                    <div class="card-body p-0 text-start">
+                                        <h5 class="card-title p-2">Beginning Node.js, Express & MongoDB Development</h5>
+                                        <p class="card-text fw-light px-2">
+                                            <ion-icon name="time-outline"></ion-icon>
+                                            <span>2h 00m</span>
+                                            <i class="fa-solid fa-signal"></i>
+                                            <span>Advance</span>
+                                        </p>
+                                        <p class="card-text px-2">
+                                            <ion-icon class="st-star" name="star"></ion-icon>
+                                            <ion-icon class="st-star" name="star"></ion-icon>
+                                            <ion-icon class="st-star" name="star"></ion-icon>
+                                            <ion-icon class="st-star" name="star"></ion-icon>
+                                            <ion-icon class="st-star" name="star-outline"></ion-icon>
+                                        </p>
+                                        <p class="card-text px-2"><span class="fw-bold">$800 </span><span
+                                                class="text-decoration-line-through">$950</span></p>
+                                        <div class="card-footer">
+                                            <div class="row align-items-center">
+                                                <div class="col-10">
+                                                    <img class="img mini-avatar rounded-circle"
+                                                        src="./assets/avatar-3.jpg" alt="Sina Ray">
+                                                    <span>Sina Ray</span>
+                                                </div>
+                                                <div class="col-2">
+                                                    <i class="fa-regular fa-bookmark"></i>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <div class="carousel-item">
+                            <div class="col-6 col-md-3 st-course-block">
+
+                                <div class="card mx-2">
+                                    <img src="./assets/course-laravel.jpg" class="card-img-top" alt="laravel">
+                                    <div class="card-body p-0 text-start">
+                                        <h5 class="card-title p-2">Laravel: The Ultimate
+                                            Beginner's Guide to Learn</h5>
+                                        <p class="card-text fw-light px-2">
+                                            <ion-icon name="time-outline"></ion-icon>
+                                            <span>1h 00m</span>
+                                            <i class="fa-solid fa-signal"></i>
+                                            <span>Advance</span>
+                                        </p>
+                                        <p class="card-text px-2">
+                                            <ion-icon class="st-star" name="star"></ion-icon>
+                                            <ion-icon class="st-star" name="star"></ion-icon>
+                                            <ion-icon class="st-star" name="star"></ion-icon>
+                                            <ion-icon class="st-star" name="star"></ion-icon>
+                                            <ion-icon class="st-star" name="star-half"></ion-icon>
+                                        </p>
+                                        <p class="card-text px-2"><span class="fw-bold">$170 </span><span
+                                                class="text-decoration-line-through">$220</span></p>
+                                        <div class="card-footer">
+                                            <div class="row align-items-center">
+                                                <div class="col-10">
+                                                    <img class="img mini-avatar rounded-circle"
+                                                        src="./assets/avatar-7.jpg" alt="Sobo Rikhan">
+                                                    <span>Sobo Rikhan</span>
+                                                </div>
+                                                <div class="col-2">
+                                                    <i class="fa-regular fa-bookmark"></i>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+
+                    </div>
+                    <a class="carousel-control-prev bg-transparent w-aut" href="#recipeCarousel2" role="button"
+                        data-bs-slide="prev">
+                        <ion-icon class="st-arrows rounded-circle p-2 bg-light" name="chevron-back-outline"
+                            aria-hidden="true"></ion-icon>
+                    </a>
+                    <a class="carousel-control-next bg-transparent w-aut" href="#recipeCarousel2" role="button"
+                        data-bs-slide="next">
+                        <ion-icon class="st-arrows rounded-circle p-2 bg-light" name="chevron-forward-outline"
+                            aria-hidden="true"></ion-icon>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+
+
+    </main>
+    <script src="https://kit.fontawesome.com/90071272c0.js" crossorigin="anonymous"></script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+
+</body>
+
+</html>
